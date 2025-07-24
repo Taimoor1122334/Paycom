@@ -328,6 +328,9 @@
   .h-\[56\.67px\] {
     height: 56.67px;
   }
+  .h-\[57\.6px\] {
+    height: 57.6px;
+  }
   .h-\[76px\] {
     height: 76px;
   }
@@ -674,6 +677,9 @@
   .py-15 {
     padding-block: calc(var(--spacing) * 15);
   }
+  .py-23 {
+    padding-block: calc(var(--spacing) * 23);
+  }
   .py-\[73px\] {
     padding-block: 73px;
   }
@@ -682,6 +688,18 @@
   }
   .pt-5 {
     padding-top: calc(var(--spacing) * 5);
+  }
+  .pt-10 {
+    padding-top: calc(var(--spacing) * 10);
+  }
+  .pt-20 {
+    padding-top: calc(var(--spacing) * 20);
+  }
+  .pt-21 {
+    padding-top: calc(var(--spacing) * 21);
+  }
+  .pt-23 {
+    padding-top: calc(var(--spacing) * 23);
   }
   .pr-5 {
     padding-right: calc(var(--spacing) * 5);
@@ -1004,6 +1022,11 @@
   .lg\:h-\[76px\] {
     @media (width >= 64rem) {
       height: 76px;
+    }
+  }
+  .lg\:h-\[97px\] {
+    @media (width >= 64rem) {
+      height: 97px;
     }
   }
   .lg\:h-\[124px\] {

@@ -1342,6 +1342,12 @@
       font-size: 46px;
     }
   }
+  .lg\:leading-\[30px\] {
+    @media (width >= 64rem) {
+      --tw-leading: 30px;
+      line-height: 30px;
+    }
+  }
   .lg\:leading-\[50px\] {
     @media (width >= 64rem) {
       --tw-leading: 50px;

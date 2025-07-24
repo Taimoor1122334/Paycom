@@ -11,16 +11,16 @@
             }
 
             init() {
-                // Add event listeners
+              
                 this.prevBtn.addEventListener('click', () => this.previousSlide());
                 this.nextBtn.addEventListener('click', () => this.nextSlide());
                 
-                // Dot navigation
+                
                 this.dots.forEach((dot, index) => {
                     dot.addEventListener('click', () => this.goToSlide(index));
                 });
 
-                // Auto-play 
+                
                 this.startAutoPlay();
             }
 
@@ -40,11 +40,11 @@
             }
 
             updateCarousel() {
-                // Move slides
+                
                 const translateX = -this.currentSlide * 100;
                 this.slidesContainer.style.transform = `translateX(${translateX}%)`;
 
-                // Update dots
+                
                 this.dots.forEach((dot, index) => {
                     if (index === this.currentSlide) {
                         dot.classList.remove('bg-gray-300');
@@ -59,7 +59,7 @@
             startAutoPlay() {
                 setInterval(() => {
                     this.nextSlide();
-                }, 5000); // Change slide every 5 seconds
+                }, 10000); 
             }
         }
 

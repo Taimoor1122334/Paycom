@@ -235,6 +235,9 @@
   .z-10 {
     z-index: 10;
   }
+  .z-50 {
+    z-index: 50;
+  }
   .container {
     width: 100%;
     @media (width >= 40rem) {
@@ -700,6 +703,9 @@
   }
   .pt-23 {
     padding-top: calc(var(--spacing) * 23);
+  }
+  .pt-\[57\.6px\] {
+    padding-top: 57.6px;
   }
   .pr-5 {
     padding-right: calc(var(--spacing) * 5);

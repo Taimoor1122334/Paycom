@@ -47,11 +47,11 @@
                 
                 this.dots.forEach((dot, index) => {
                     if (index === this.currentSlide) {
-                        dot.classList.remove('bg-gray-300');
+                        dot.classList.remove('bg-gray-500');
                         dot.classList.add('bg-[#0064C8]');
                     } else {
                         dot.classList.remove('bg-[#0064C8]');
-                        dot.classList.add('bg-gray-300');
+                        dot.classList.add('bg-gray-500');
                     }
                 });
             }

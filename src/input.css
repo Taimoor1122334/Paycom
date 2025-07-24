@@ -5,7 +5,7 @@ body{
     overflow-x: hidden;
 }
 .search-jobs-btn{
-    width: 145px;
+    width: 165px;
      height: 49px;
       border-radius: 4px; 
       border: 1px; 
@@ -13,6 +13,7 @@ body{
       font-size: 16px; 
       color: white;
        line-height: 20.8px; 
+       font-weight: bold;
        letter-spacing: 1.2px; 
        text-transform: uppercase;
        cursor: pointer;

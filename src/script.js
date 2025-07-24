@@ -68,7 +68,10 @@
             new Carousel();
         });
     
-          function toggleSection(id) {
-    const el = document.getElementById(id);
-    el.classList.toggle('hidden');
-  }
+     function toggleSection(id, arrowId) {
+  const el = document.getElementById(id);
+  const arrow = document.getElementById(arrowId);
+  
+  el.classList.toggle('hidden');
+  arrow.classList.toggle('rotate-90');
+}

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paycom Testimonial Carousel</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 min-h-screen flex items-center justify-center p-4">
+    <div class="w-full max-w-4xl">
+        <!-- Carousel Container -->
+        <div class="bg-white rounded-lg shadow-sm border border-gray-100 relative">
+            <!-- Navigation Arrows -->
+            <button id="prevBtn" class="absolute left-4 top-1/2 -translate-y-1/2 z-10 text-gray-400 hover:text-gray-600 transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 19l-7-7 7-7"></path>
+                </svg>
+            </button>
+            
+            <button id="nextBtn" class="absolute right-4 top-1/2 -translate-y-1/2 z-10 text-gray-400 hover:text-gray-600 transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5l7 7-7 7"></path>
+                </svg>
+            </button>
+
+            <!-- Carousel Content -->
+            <div class="px-16 py-12 text-center">
+                <!-- Header -->
+                <h2 class="text-green-600 font-semibold text-base mb-8 tracking-wide">
+                    WHAT PAYCOM EMPLOYEES ARE SAYING
+                </h2>
+
+                <!-- Slides Container -->
+                <div class="relative overflow-hidden">
+                    <div id="slidesContainer" class="flex transition-transform duration-300 ease-in-out">
+                        <!-- Slide 1 -->
+                        <div class="w-full flex-shrink-0">
+                            <blockquote class="text-gray-700 text-lg leading-relaxed mb-6 max-w-2xl mx-auto">
+                                "Having support from every level — be it benefits, well-equipped managers or helpful technology — has empowered my career and allowed me to excel in ways I never expected."
+                            </blockquote>
+                            <div class="text-gray-600">
+                                <p class="font-medium text-sm mb-1">Braiden M. (he/him)</p>
+                                <p class="text-xs text-gray-500">Software Quality Assurance Analyst</p>
+                            </div>
+                        </div>
+
+                        <!-- Slide 2 -->
+                        <div class="w-full flex-shrink-0">
+                            <blockquote class="text-gray-700 text-lg leading-relaxed mb-6 max-w-2xl mx-auto">
+                                "The collaborative environment here has allowed me to take on challenging projects and develop skills I never thought possible. Every day brings new opportunities to grow."
+                            </blockquote>
+                            <div class="text-gray-600">
+                                <p class="font-medium text-sm mb-1">Sarah K. (she/her)</p>
+                                <p class="text-xs text-gray-500">Product Development Manager</p>
+                            </div>
+                        </div>
+
+                        <!-- Slide 3 -->
+                        <div class="w-full flex-shrink-0">
+                            <blockquote class="text-gray-700 text-lg leading-relaxed mb-6 max-w-2xl mx-auto">
+                                "Working at Paycom means being part of something bigger. The innovation and teamwork here inspire me to push boundaries and deliver exceptional results."
+                            </blockquote>
+                            <div class="text-gray-600">
+                                <p class="font-medium text-sm mb-1">Michael R. (he/him)</p>
+                                <p class="text-xs text-gray-500">Senior Software Engineer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dot Indicators -->
+            <div class="flex justify-center space-x-2 pb-8">
+                <button class="dot w-2 h-2 rounded-full bg-gray-800 transition-all duration-200" data-slide="0"></button>
+                <button class="dot w-2 h-2 rounded-full bg-gray-300 hover:bg-gray-400 transition-all duration-200" data-slide="1"></button>
+                <button class="dot w-2 h-2 rounded-full bg-gray-300 hover:bg-gray-400 transition-all duration-200" data-slide="2"></button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        class Carousel {
+            constructor() {
+                this.currentSlide = 0;
+                this.totalSlides = 3;
+                this.slidesContainer = document.getElementById('slidesContainer');
+                this.dots = document.querySelectorAll('.dot');
+                this.prevBtn = document.getElementById('prevBtn');
+                this.nextBtn = document.getElementById('nextBtn');
+                
+                this.init();
+            }
+
+            init() {
+                // Add event listeners
+                this.prevBtn.addEventListener('click', () => this.previousSlide());
+                this.nextBtn.addEventListener('click', () => this.nextSlide());
+                
+                // Dot navigation
+                this.dots.forEach((dot, index) => {
+                    dot.addEventListener('click', () => this.goToSlide(index));
+                });
+
+                // Auto-play (optional)
+                this.startAutoPlay();
+            }
+
+            goToSlide(slideIndex) {
+                this.currentSlide = slideIndex;
+                this.updateCarousel();
+            }
+
+            nextSlide() {
+                this.currentSlide = (this.currentSlide + 1) % this.totalSlides;
+                this.updateCarousel();
+            }
+
+            previousSlide() {
+                this.currentSlide = (this.currentSlide - 1 + this.totalSlides) % this.totalSlides;
+                this.updateCarousel();
+            }
+
+            updateCarousel() {
+                // Move slides
+                const translateX = -this.currentSlide * 100;
+                this.slidesContainer.style.transform = `translateX(${translateX}%)`;
+
+                // Update dots
+                this.dots.forEach((dot, index) => {
+                    if (index === this.currentSlide) {
+                        dot.classList.remove('bg-gray-300');
+                        dot.classList.add('bg-gray-800');
+                    } else {
+                        dot.classList.remove('bg-gray-800');
+                        dot.classList.add('bg-gray-300');
+                    }
+                });
+            }
+
+            startAutoPlay() {
+                setInterval(() => {
+                    this.nextSlide();
+                }, 5000); // Change slide every 5 seconds
+            }
+        }
+
+        // Initialize carousel when DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            new Carousel();
+        });
+    </script>
+</body>
+</html>

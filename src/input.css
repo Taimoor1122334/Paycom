@@ -87,7 +87,9 @@
   .del-p{
     @apply text-xs text-[#3D3D3D] lg:text-sm italic
   }
-
+  .p-copyright{
+    @apply text-sm text-[#FFFFFF] lg:text-white  leading-[25px] 
+  }
 }
 
 h1,h3, .paycom-btn, .nav-btn{

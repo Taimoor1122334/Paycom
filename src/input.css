@@ -81,6 +81,12 @@
   .lower-footer-links{
     @apply text-xs text-white leading-[21px] uppercase font-bold
   }
+  .del-img{
+    @apply h-[35px] w-[35px]
+  }
+  .del-p{
+    @apply text-xs text-[#3D3D3D] lg:text-sm italic
+  }
 
 }
 

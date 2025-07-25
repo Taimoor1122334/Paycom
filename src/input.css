@@ -4,28 +4,56 @@ body{
     font-family:"Open Sans", sans-serif;
     overflow-x: hidden;
 }
-.search-jobs-btn{
-    width: 165px;
-     height: 49px;
-      border-radius: 4px; 
-      border: 1px; 
-      background-color: #0064C8; 
-      font-size: 16px; 
-      color: white;
-       line-height: 20.8px; 
-       font-weight: bold;
-       letter-spacing: 1.2px; 
-       text-transform: uppercase;
-       cursor: pointer;
-      font-family: "bebas-neue-pro", sans-serif;
+
+.custom-list li {
+  position: relative;
+  padding-left: 24px; 
 }
-.search-jobs-btn:hover{
- background-color: #024c96;
+
+.custom-list li::before {
+  content: url("images/list.png");
+  position: absolute;
+  top: -1px; 
+  left: 0;
+  width: 13px;
+  height: 13px;
 }
+
+.search-jobs-btn {
+  justify-content: center;
+  align-items: center;
+  width: 165px;
+  height: 49px;
+  border-radius: 4px;
+  border: 1px solid transparent; 
+  background-color: #0064C8;
+  font-size: 16px;
+  color: white;
+  line-height: 20.8px;
+  font-weight: bold;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-family: "bebas-neue-pro", sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+.search-jobs-btn:hover {
+  background-color: #024c96;
+}
+
 
 .hero-section{
     background-color: #EBEBEB;
 }
 .heading{
   font-family: "bebas-neue-pro", sans-serif;
+}
+
+.border-bottom {
+   padding-bottom: 8px;
+    position: relative; 
+    box-shadow: 
+        0 1px 0 0 rgba(0, 0, 0, 0.8),
+        0 2px 0 0 rgba(255, 255, 255, 0.8);
 }

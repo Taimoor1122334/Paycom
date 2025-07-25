@@ -600,6 +600,16 @@
       display: inline;
     }
   }
+  .md\:w-\[50\%\] {
+    @media (width >= 48rem) {
+      width: 50%;
+    }
+  }
+  .md\:w-\[100\%\] {
+    @media (width >= 48rem) {
+      width: 100%;
+    }
+  }
   .md\:w-auto {
     @media (width >= 48rem) {
       width: auto;
@@ -862,6 +872,11 @@
     @media (width >= 64rem) {
       --tw-leading: 50px;
       line-height: 50px;
+    }
+  }
+  .xl\:max-w-\[60\%\] {
+    @media (width >= 80rem) {
+      max-width: 60%;
     }
   }
 }

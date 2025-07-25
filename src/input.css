@@ -5,7 +5,7 @@
 
     .nav-btn{
 
-    @apply hidden lg:flex justify-center items-center w-[165px] h-[49px] rounded-[4px];
+    @apply hidden lg:inline-flex justify-center items-center px-11 py-[13px] rounded-[4px];
     @apply border border-transparent bg-[#0064C8] text-white;
     @apply text-[16px] leading-[20.8px] font-bold tracking-[1.2px] uppercase;
     @apply cursor-pointer transition-colors duration-300;
@@ -16,11 +16,11 @@
   }
 
   .paycom-btn {
-    @apply flex justify-center items-center w-[165px] h-[49px] rounded-[4px];
-    @apply border border-transparent bg-[#0064C8] text-white;
-    @apply text-[16px] leading-[20.8px] font-bold tracking-[1.2px] uppercase;
-    @apply cursor-pointer transition-colors duration-300;
-  }
+  @apply inline-flex justify-center items-center px-11 py-[13px] rounded-[4px];
+  @apply border border-transparent bg-[#0064C8] text-white;
+  @apply text-[16px] leading-[20.8px] font-bold tracking-[1.2px] uppercase;
+  @apply cursor-pointer transition-colors duration-300;
+}
   
   .paycom-btn:hover {
     @apply bg-[#0055ad];
@@ -31,7 +31,7 @@
   }
 
   h1{
-    @apply text-5xl lg:text-6xl leading-[47.47px] lg:leading-[65px] font-bold text-[#024731] tracking-[1px] ;
+    @apply text-[47.5px] lg:text-[65px] leading-[47.47px] lg:leading-[65px] font-bold text-[#024731] tracking-[1px] ;
   }
   
   h2{
@@ -39,7 +39,7 @@
   }
 
   h3{
-    @apply  text-[31.8px] tracking-[1px] leading-[34.8px]  lg:text-[40px] font-bold lg:leading-[50px]
+    @apply  text-[28px] tracking-[1px] leading-[34.8px]  lg:text-[40px] font-bold lg:leading-[50px]
   }
 
   h4{
@@ -85,10 +85,13 @@
     @apply h-[35px] w-[35px]
   }
   .del-p{
-    @apply text-xs text-[#3D3D3D] lg:text-sm italic
+    @apply text-xs text-[#3D3D3D] lg:text-sm italic leading-[125%]
   }
   .p-copyright{
     @apply text-sm text-[#FFFFFF] lg:text-white  leading-[25px] 
+  }
+  .top-footer{
+    @apply text-2xl text-white leading-[43px] font-normal
   }
 }
 

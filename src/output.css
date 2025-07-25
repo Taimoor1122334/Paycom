@@ -32,6 +32,7 @@
     --text-5xl--line-height: 1;
     --text-6xl: 3.75rem;
     --text-6xl--line-height: 1;
+    --font-weight-normal: 400;
     --font-weight-bold: 700;
     --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
     --aspect-video: 16 / 9;
@@ -199,6 +200,9 @@
   .top-0 {
     top: calc(var(--spacing) * 0);
   }
+  .top-1 {
+    top: calc(var(--spacing) * 1);
+  }
   .top-1\/2 {
     top: calc(1/2 * 100%);
   }
@@ -247,6 +251,9 @@
   .mb-4 {
     margin-bottom: calc(var(--spacing) * 4);
   }
+  .mb-8 {
+    margin-bottom: calc(var(--spacing) * 8);
+  }
   .block {
     display: block;
   }
@@ -255,6 +262,9 @@
   }
   .hidden {
     display: none;
+  }
+  .table {
+    display: table;
   }
   .aspect-video {
     aspect-ratio: var(--aspect-video);
@@ -304,11 +314,21 @@
   .max-w-full {
     max-width: 100%;
   }
+  .flex-shrink {
+    flex-shrink: 1;
+  }
   .flex-shrink-0 {
     flex-shrink: 0;
   }
   .shrink-0 {
     flex-shrink: 0;
+  }
+  .border-collapse {
+    border-collapse: collapse;
+  }
+  .-translate-y-1 {
+    --tw-translate-y: calc(var(--spacing) * -1);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
   }
   .-translate-y-1\/2 {
     --tw-translate-y: calc(calc(1/2 * 100%) * -1);
@@ -325,6 +345,9 @@
   }
   .cursor-pointer {
     cursor: pointer;
+  }
+  .resize {
+    resize: both;
   }
   .flex-col {
     flex-direction: column;
@@ -410,6 +433,10 @@
   .rounded-full {
     border-radius: calc(infinity * 1px);
   }
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+  }
   .bg-\[\#0064C8\] {
     background-color: #0064C8;
   }
@@ -467,11 +494,20 @@
   .pt-4 {
     padding-top: calc(var(--spacing) * 4);
   }
+  .pt-6 {
+    padding-top: calc(var(--spacing) * 6);
+  }
+  .pt-7 {
+    padding-top: calc(var(--spacing) * 7);
+  }
   .pb-5 {
     padding-bottom: calc(var(--spacing) * 5);
   }
   .pb-8 {
     padding-bottom: calc(var(--spacing) * 8);
+  }
+  .pb-10 {
+    padding-bottom: calc(var(--spacing) * 10);
   }
   .pl-2 {
     padding-left: calc(var(--spacing) * 2);
@@ -481,10 +517,6 @@
   }
   .text-center {
     text-align: center;
-  }
-  .text-2xl {
-    font-size: var(--text-2xl);
-    line-height: var(--tw-leading, var(--text-2xl--line-height));
   }
   .text-3xl {
     font-size: var(--text-3xl);
@@ -504,10 +536,6 @@
     --tw-leading: 34px;
     line-height: 34px;
   }
-  .leading-\[43px\] {
-    --tw-leading: 43px;
-    line-height: 43px;
-  }
   .leading-\[50px\] {
     --tw-leading: 50px;
     line-height: 50px;
@@ -518,6 +546,13 @@
   }
   .text-white {
     color: var(--color-white);
+  }
+  .underline {
+    text-decoration-line: underline;
+  }
+  .outline {
+    outline-style: var(--tw-outline-style);
+    outline-width: 1px;
   }
   .transition-all {
     transition-property: all;
@@ -590,6 +625,11 @@
       margin-top: calc(var(--spacing) * 0);
     }
   }
+  .lg\:mt-8 {
+    @media (width >= 64rem) {
+      margin-top: calc(var(--spacing) * 8);
+    }
+  }
   .lg\:mt-10 {
     @media (width >= 64rem) {
       margin-top: calc(var(--spacing) * 10);
@@ -628,16 +668,6 @@
   .lg\:h-\[76px\] {
     @media (width >= 64rem) {
       height: 76px;
-    }
-  }
-  .lg\:h-\[377px\] {
-    @media (width >= 64rem) {
-      height: 377px;
-    }
-  }
-  .lg\:h-\[416px\] {
-    @media (width >= 64rem) {
-      height: 416px;
     }
   }
   .lg\:max-h-\[340px\] {
@@ -680,11 +710,6 @@
       width: 630px;
     }
   }
-  .lg\:w-\[740px\] {
-    @media (width >= 64rem) {
-      width: 740px;
-    }
-  }
   .lg\:max-w-\[50\%\] {
     @media (width >= 64rem) {
       max-width: 50%;
@@ -718,6 +743,11 @@
   .lg\:justify-end {
     @media (width >= 64rem) {
       justify-content: flex-end;
+    }
+  }
+  .lg\:gap-8 {
+    @media (width >= 64rem) {
+      gap: calc(var(--spacing) * 8);
     }
   }
   .lg\:gap-10 {
@@ -788,24 +818,19 @@
       padding-block: 73px;
     }
   }
+  .lg\:pt-3 {
+    @media (width >= 64rem) {
+      padding-top: calc(var(--spacing) * 3);
+    }
+  }
   .lg\:pr-5 {
     @media (width >= 64rem) {
       padding-right: calc(var(--spacing) * 5);
     }
   }
-  .lg\:pr-10 {
-    @media (width >= 64rem) {
-      padding-right: calc(var(--spacing) * 10);
-    }
-  }
   .lg\:pr-12 {
     @media (width >= 64rem) {
       padding-right: calc(var(--spacing) * 12);
-    }
-  }
-  .lg\:pb-5 {
-    @media (width >= 64rem) {
-      padding-bottom: calc(var(--spacing) * 5);
     }
   }
   .lg\:pb-10 {
@@ -843,13 +868,13 @@
 @layer components {
   .nav-btn {
     display: none;
-    height: 49px;
-    width: 165px;
     align-items: center;
     justify-content: center;
     border-radius: 4px;
+    padding-inline: calc(var(--spacing) * 11);
+    padding-block: 13px;
     @media (width >= 64rem) {
-      display: flex;
+      display: inline-flex;
     }
     border-style: var(--tw-border-style);
     border-width: 1px;
@@ -875,12 +900,12 @@
     background-color: #0055ad;
   }
   .paycom-btn {
-    display: flex;
-    height: 49px;
-    width: 165px;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     border-radius: 4px;
+    padding-inline: calc(var(--spacing) * 11);
+    padding-block: 13px;
     border-style: var(--tw-border-style);
     border-width: 1px;
     border-color: transparent;
@@ -911,8 +936,7 @@
     line-height: 28.8px;
   }
   h1 {
-    font-size: var(--text-5xl);
-    line-height: var(--tw-leading, var(--text-5xl--line-height));
+    font-size: 47.5px;
     --tw-leading: 47.47px;
     line-height: 47.47px;
     --tw-font-weight: var(--font-weight-bold);
@@ -921,8 +945,7 @@
     letter-spacing: 1px;
     color: #024731;
     @media (width >= 64rem) {
-      font-size: var(--text-6xl);
-      line-height: var(--tw-leading, var(--text-6xl--line-height));
+      font-size: 65px;
     }
     @media (width >= 64rem) {
       --tw-leading: 65px;
@@ -940,7 +963,7 @@
     }
   }
   h3 {
-    font-size: 31.8px;
+    font-size: 28px;
     --tw-leading: 34.8px;
     line-height: 34.8px;
     --tw-font-weight: var(--font-weight-bold);
@@ -1052,6 +1075,8 @@
   .del-p {
     font-size: var(--text-xs);
     line-height: var(--tw-leading, var(--text-xs--line-height));
+    --tw-leading: 125%;
+    line-height: 125%;
     color: #3D3D3D;
     font-style: italic;
     @media (width >= 64rem) {
@@ -1068,6 +1093,15 @@
     @media (width >= 64rem) {
       color: var(--color-white);
     }
+  }
+  .top-footer {
+    font-size: var(--text-2xl);
+    line-height: var(--tw-leading, var(--text-2xl--line-height));
+    --tw-leading: 43px;
+    line-height: 43px;
+    --tw-font-weight: var(--font-weight-normal);
+    font-weight: var(--font-weight-normal);
+    color: var(--color-white);
   }
 }
 h1,h3, .paycom-btn, .nav-btn {
@@ -1145,6 +1179,11 @@ body {
   inherits: false;
   initial-value: 0;
 }
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
 @property --tw-leading {
   syntax: "*";
   inherits: false;
@@ -1153,6 +1192,11 @@ body {
   syntax: "*";
   inherits: false;
 }
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
 @property --tw-duration {
   syntax: "*";
   inherits: false;
@@ -1160,11 +1204,6 @@ body {
 @property --tw-ease {
   syntax: "*";
   inherits: false;
-}
-@property --tw-border-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
 }
 @property --tw-tracking {
   syntax: "*";
@@ -1183,11 +1222,12 @@ body {
       --tw-skew-y: initial;
       --tw-space-y-reverse: 0;
       --tw-space-x-reverse: 0;
+      --tw-border-style: solid;
       --tw-leading: initial;
       --tw-font-weight: initial;
+      --tw-outline-style: solid;
       --tw-duration: initial;
       --tw-ease: initial;
-      --tw-border-style: solid;
       --tw-tracking: initial;
     }
   }

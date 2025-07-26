@@ -11,7 +11,7 @@
     @apply cursor-pointer transition-colors duration-300;
   }
   
-  .navbtn:hover {
+  .nav-btn:hover {
     @apply bg-[#0055ad];
   }
 
@@ -50,7 +50,7 @@
     @apply font-bold text-base mb-1
   }
 
-  .custom-list{
+  .B-and-C-list , .custom-list{
     @apply space-y-3 mt-5;
   }
 
@@ -76,29 +76,31 @@
    @apply w-[170px] h-auto
   }
   .footer-links{
-    @apply text-base text-white hover:text-gray-200 transition
+    @apply text-base text-white hover:underline transition
   }
   .lower-footer-links{
     @apply text-xs text-white leading-[21px] uppercase font-bold
   }
   .del-img{
-    @apply h-[35px] w-[35px]
+    @apply lg:h-[35px] lg:w-[35px] h-[43px] w-[43px]
   }
   .del-p{
     @apply text-xs text-[#3D3D3D] lg:text-sm italic leading-[125%]
   }
   .p-copyright{
-    @apply text-sm text-[#FFFFFF] lg:text-white  leading-[25px] 
+    @apply text-sm mt-3 lg:mt-0 text-[#FFFFFF]   leading-[25px] 
   }
   .top-footer{
     @apply text-2xl text-white leading-[43px] font-normal
+  }
+  .about-paycom-btn, .job-categories-btn{
+    @apply text-white text-lg font-bold
   }
 }
 
 h1,h3, .paycom-btn, .nav-btn{
     font-family: "bebas-neue-pro", sans-serif;
 }
-
 
 
 body{
@@ -108,10 +110,14 @@ body{
 
 .custom-list li {
   position: relative;
-  padding-left: 24px; 
+  padding-left: 20px; 
+}
+.B-and-C-list li{
+position: relative;
+  padding-left: 15px; 
 }
 
-.custom-list li::before {
+.B-and-C-list li::before , .custom-list li::before {
   content: url("images/list.png");
   position: absolute;
   top: -1px; 
@@ -121,7 +127,10 @@ body{
 }
 
 
-
+.youtube-video{
+    width: 100%;
+    height: auto;
+}
 
 
 .hero-section{

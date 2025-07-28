@@ -35,7 +35,7 @@
   }
   
   h2{
-    @apply text-[#024731] text-[21.5px] lg:text-2xl leading-[30px]
+    @apply text-[#024731] text-[21.5px] lg:text-2xl leading-[30px];
   }
 
   h3{
@@ -90,7 +90,7 @@
   .p-copyright{
     @apply text-sm mt-3 lg:mt-0 text-[#FFFFFF]   leading-[25px] 
   }
-  .top-footer{
+  p.top-footer{
     @apply text-2xl text-white leading-[43px] font-normal
   }
   .about-paycom-btn, .job-categories-btn{

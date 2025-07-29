@@ -1,13 +1,10 @@
 @import "tailwindcss";
 
-
 @layer components {
-
-    .nav-btn{
-
-    @apply hidden lg:inline-flex justify-center items-center px-11 py-[13px] rounded-[4px];
+  .nav-btn {
+    @apply hidden lg:inline-flex justify-center items-center px-[2.75rem] py-[0.8125rem] rounded-[0.25rem];
     @apply border border-transparent bg-[#0064C8] text-white;
-    @apply text-[16px] leading-[20.8px] font-bold tracking-[1.2px] uppercase;
+    @apply text-[1rem] leading-[1.3rem] font-bold tracking-[0.075rem] uppercase;
     @apply cursor-pointer transition-colors duration-300;
   }
   
@@ -16,100 +13,110 @@
   }
 
   .paycom-btn {
-  @apply inline-flex justify-center items-center px-11 py-[13px] rounded-[4px];
-  @apply border border-transparent bg-[#0064C8] text-white;
-  @apply text-[16px] leading-[20.8px] font-bold tracking-[1.2px] uppercase;
-  @apply cursor-pointer transition-colors duration-300;
-}
+    @apply inline-flex justify-center items-center px-[2.75rem] py-[0.8125rem] rounded-[0.25rem];
+    @apply border border-transparent bg-[#0064C8] text-white;
+    @apply text-[1rem] leading-[1.3rem] font-bold tracking-[0.075rem] uppercase;
+    @apply cursor-pointer transition-colors duration-300;
+  }
   
   .paycom-btn:hover {
     @apply bg-[#0055ad];
   }
 
-  p{
-    @apply text-base leading-[28.8px];
+  p {
+    @apply text-base leading-[1.8rem];
   }
 
-  h1{
-    @apply text-[47.5px] lg:text-[65px] leading-[47.47px] lg:leading-[65px] font-bold text-[#024731] tracking-[1px] ;
+  h1 {
+    @apply text-[2.96875rem] lg:text-[4.0625rem] leading-[2.966875rem] lg:leading-[4.0625rem] font-bold text-[#024731] tracking-[0.0625rem];
   }
   
-  h2{
-    @apply text-[#024731] text-[21.5px] lg:text-2xl leading-[30px];
+  h2 {
+    @apply text-[#024731] text-[1.34375rem] lg:text-[1.5rem] leading-[1.875rem];
   }
 
-  h3{
-    @apply  text-[28px] tracking-[1px] leading-[34.8px]  lg:text-[40px] font-bold lg:leading-[50px]
+  h3 {
+    @apply text-[1.75rem] tracking-[0.0625rem] leading-[2.175rem] lg:text-[2.5rem] font-bold lg:leading-[3.125rem];
   }
 
-  h4{
-    @apply text-[23.5px] lg:text-[28px] leading-[29px] lg:leading-[35px] font-bold text-[#008542] text-center
+  h4 {
+    @apply text-[1.46875rem] lg:text-[1.75rem] leading-[1.8125rem] lg:leading-[2.1875rem] font-bold text-[#008542] text-center;
   }
 
-  h5{
-    @apply font-bold text-base mb-1
+  h5 {
+    @apply font-bold text-base mb-[0.0625rem];
   }
 
-  .B-and-C-list , .custom-list{
-    @apply space-y-3 mt-5;
+  .B-and-C-list, .custom-list {
+    @apply space-y-[0.1875rem] mt-[0.3125rem];
   }
 
-  .carousel-heading{
-    @apply text-[#008542]
+  .carousel-heading {
+    @apply text-[#008542];
   }
 
-  .p-carousel{
-    @apply text-2xl leading-[27px] lg:leading-[30px] mb-6 max-w-4xl mx-auto
-  }
-  .p-whats-desktop{
-       @apply hidden lg:block ;
+  .p-carousel {
+    @apply text-[1.5rem] leading-[1.6875rem] lg:leading-[1.875rem] mb-[0.375rem] mx-auto;
   }
 
-  .p-whats-mobile{
-       @apply lg:hidden block ;
+  .p-whats-desktop {
+    @apply hidden lg:block;
   }
 
-  .social-icons{
-    @apply w-[44px] h-[44px]
+  .p-whats-mobile {
+    @apply lg:hidden block;
   }
-  .footer-logo{
-   @apply w-[170px] h-auto
+
+  .social-icons {
+    @apply w-[2.75rem] h-[2.75rem];
   }
-  .footer-links{
-    @apply text-base text-white hover:underline transition
+
+  .footer-logo {
+    @apply w-[10.625rem] h-auto;
   }
-  .lower-footer-links{
-    @apply text-xs text-white leading-[21px] uppercase font-bold
+
+  .footer-links {
+    @apply text-base text-white hover:underline transition;
   }
-  .del-img{
-    @apply lg:h-[35px] lg:w-[35px] h-[43px] w-[43px]
+
+  .lower-footer-links {
+    @apply text-[0.75rem] text-white leading-[1.3125rem] uppercase font-bold;
   }
-  .del-p{
-    @apply text-xs text-[#3D3D3D] lg:text-sm italic leading-[125%]
+
+  .del-img {
+    @apply lg:h-[2.1875rem] lg:w-[2.1875rem] h-[2.6875rem] w-[2.6875rem];
   }
-  .p-copyright{
-    @apply text-sm mt-3 lg:mt-0 text-[#FFFFFF]   leading-[25px] 
+
+  .del-p {
+    @apply text-[0.75rem] text-[#3D3D3D] lg:text-[0.875rem] italic leading-[125%];
   }
-  p.top-footer{
-    @apply text-2xl text-white leading-[43px] font-normal
+
+  .p-copyright {
+    @apply text-[0.875rem] mt-[0.1875rem] lg:mt-0 text-[#FFFFFF] leading-[1.5625rem];
   }
-  .about-paycom-btn, .job-categories-btn{
-    @apply text-white text-lg font-bold
+
+  p.top-footer {
+    @apply text-[1.5rem] text-white leading-[2.6875rem] font-normal;
   }
-  .link-text{
-    @apply text-[#0064C8] underline sm:no-underline sm:text-inherit
+
+  .about-paycom-btn, .job-categories-btn {
+    @apply text-white text-[1.125rem] font-bold;
+  }
+
+  .link-text {
+    @apply text-[#0064C8] underline sm:no-underline sm:text-inherit;
   }
 }
 
-h1,h3, .paycom-btn, .nav-btn{
-    font-family: "bebas-neue-pro", sans-serif;
+h1, h3, .paycom-btn, .nav-btn {
+  font-family: "bebas-neue-pro", sans-serif;
 }
 
-
-body{
-    font-family:"Open Sans", sans-serif;
-    overflow-x: hidden;
+body {
+  font-family: "Open Sans", sans-serif;
+  overflow-x: hidden;
 }
+
 
 .custom-list li {
   position: relative;
@@ -130,18 +137,19 @@ position: relative;
 }
 
 
-.youtube-video{
-    width: 100%;
-    height: auto;
+.youtube-video {
+  width: 100%;
+  height: auto;
 }
 
-
-.hero-section{
-    background-color: #EBEBEB;
+.hero-section {
+  background-color: #EBEBEB;
 }
-.heading{
+
+.heading {
   font-family: "bebas-neue-pro", sans-serif;
 }
+
 
 .border-bottom {
    padding-bottom: 8px;
@@ -150,3 +158,9 @@ position: relative;
         0 1px 0 0 rgba(0, 0, 0, 0.8),
         0 2px 0 0 rgba(255, 255, 255, 0.8);
 }
+
+@media (max-width: 901px) {
+    body {
+        font-size: 1.1rem;
+    }
+  }

@@ -96,6 +96,9 @@
   .about-paycom-btn, .job-categories-btn{
     @apply text-white text-lg font-bold
   }
+  .link-text{
+    @apply text-[#0064C8] underline sm:no-underline sm:text-inherit
+  }
 }
 
 h1,h3, .paycom-btn, .nav-btn{
@@ -118,7 +121,7 @@ position: relative;
 }
 
 .B-and-C-list li::before , .custom-list li::before {
-  content: url("images/list.png");
+  content: url("images/list.svg");
   position: absolute;
   top: -1px; 
   left: 0;

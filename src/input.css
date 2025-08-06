@@ -11,7 +11,7 @@
   .nav-btn:hover {
     @apply bg-[#0055ad];
   }
-
+ 
   .paycom-btn {
     @apply inline-flex justify-center items-center px-[2.75rem] py-[0.8125rem] rounded-[0.25rem];
     @apply border border-transparent bg-[#0064C8] text-white;
@@ -149,7 +149,6 @@ position: relative;
 .heading {
   font-family: "bebas-neue-pro", sans-serif;
 }
-
 
 .border-bottom {
    padding-bottom: 8px;

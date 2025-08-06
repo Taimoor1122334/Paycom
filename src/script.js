@@ -73,5 +73,5 @@
   const arrow = document.getElementById(arrowId);
   
   el.classList.toggle('hidden');
-  arrow.classList.toggle('rotate90');
+  arrow.classList.toggle('rotate-90');
 }

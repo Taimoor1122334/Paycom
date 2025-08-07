@@ -3,7 +3,8 @@
 @layer components {
   .nav-btn {
     @apply hidden lg:inline-flex justify-center items-center px-[2.75rem] py-[0.8125rem] rounded-[0.25rem];
-    @apply border border-transparent bg-[#0064C8] text-white;
+    @apply border border-transparent bg-[#0064C8] text-white focus:outline-none focus:ring-2 focus:ring-emerald-600 focus:bg-[#0055ad]
+;
     @apply text-[1rem] leading-[1.3rem] font-bold tracking-[0.075rem] uppercase;
     @apply cursor-pointer transition-colors duration-300;
   }
@@ -14,7 +15,7 @@
  
   .paycom-btn {
     @apply inline-flex justify-center items-center px-[2.75rem] py-[0.8125rem] rounded-[0.25rem];
-    @apply border border-transparent bg-[#0064C8] text-white;
+    @apply border border-transparent bg-[#0064C8] text-white focus:outline-none focus:ring-2 focus:ring-emerald-600 focus:bg-[#0055ad];
     @apply text-[1rem] leading-[1.3rem] font-bold tracking-[0.075rem] uppercase;
     @apply cursor-pointer transition-colors duration-300;
   }
